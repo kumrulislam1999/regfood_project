@@ -1,0 +1,139 @@
+/*--===== Start Singin Section Here =====--*/
+#singin_section {
+    padding: 100px 0;
+    background-color: $bg_color;
+
+    .section_box {
+        .singin_info {
+            background-color: $white_color;
+            box-shadow: 0 0 16px rgba($black_color, 0.15);
+            padding: 50px;
+            border-radius: 10px;
+
+            .heading_part {
+                text-align: center;
+
+                h2 {
+                    @include heading_2
+                }
+
+                h6 {
+                    @include heading_6;
+                    margin-top: 5px;
+                    font-weight: 600;
+                }
+            }
+
+            .form_box {
+                padding: 25px 0 0;
+
+                .input_box {
+                    width: 100%;
+                    // border: 1px solid rgba($primary_color, 0.2);
+                    background-color: $white_color;
+                    border-radius: 30px;
+                    margin: 12px 0;
+                    padding: 14px 20px;
+                    box-shadow: 0 0 4px rgba($black_color, 0.3);
+                }
+
+                .label_box {
+                    margin: 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    input {
+                        accent-color: $primary_color;
+                        margin-right: 10px
+                    }
+
+                    p {
+                        @include paragraph($f_size: 18px, $color: $item_bg_color);
+                        font-weight: 600;
+                    }
+
+                    .forget_box {
+                        p {
+                            color: $primary_color
+                        }
+                    }
+                }
+
+                a.login {
+                    @include btn($bg_color: $primary_color, $color: $white_color);
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    border-radius: 40px;
+                    transition: 0.4s;
+                    margin-top: 30px;
+
+                    &:hover {
+                        background-color: $item_bg_color;
+                    }
+                }
+
+                .circle {
+                    margin: 40px 0;
+                    height: 2px;
+                    width: 100%;
+                    position: relative;
+                    background-color: $primary_color ;
+
+                    span {
+                        @include flex_center;
+                        left: 50%;
+                        top: 50%;
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        border: 2px solid $primary_color;
+                        border-radius: 50%;
+                        color: $primary_color;
+                        transform: translate(-50%, -50%);
+                        z-index: 10;
+                        background-color: $white_color;
+                    }
+                }
+
+                .social_media {
+                    margin: 5px 0;
+                    text-align: center;
+                    justify-content: center;
+
+                    li {
+                        margin: 0 5px;
+
+                        a {
+                            @include icon($bg_color: $primary_color, $color: $white_color, $border_radius: 50%);
+                            transition: 0.4s;
+
+                            &:hover {
+                                background-color: $item_bg_color
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    @include paragraph($f_size: 18px);
+                    margin-top: 30px;
+                    text-align: center;
+
+                    a {
+                        color: $primary_color;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: $item_bg_color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Singin Section Here =====--*/

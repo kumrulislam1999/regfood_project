@@ -1,0 +1,277 @@
+ /*--===== Start Menu Details Section Here =====--*/
+ #menu_details_section {
+     margin: 100px 0;
+
+     .section_box {
+         .details_image {
+             .menu_main_slider {
+                 margin-bottom: 12px;
+
+                 .slider_item {
+                     img {
+                         width: 100%;
+                         height: 85%;
+                     }
+                 }
+             }
+
+             .menu_mini_slider {
+                 position: relative;
+
+                 .slider_item {
+                     margin: 20px 3px;
+
+                     img {
+                         height: 110px;
+                     }
+                 }
+
+
+                 .arrow {
+                     @include icon($bg_color: $primary_color, $color: $white_color, $border_radius: 50%, );
+                     transform: translate(-50%, -50%);
+                     position: absolute;
+                     top: 50%;
+                     z-index: 3;
+                     transition: 0.4s;
+
+                     &:hover {
+                         box-shadow: 0 0 8px rgba($black_color, 0.4);
+                         background-color: $white_color;
+                         color: $primary_color;
+                     }
+
+                 }
+
+                 .arrow_left {
+                     left: 0;
+                     transform: translate(-50%, -50%);
+
+                 }
+
+                 .arrow_right {
+                     right: 0;
+                     transform: translate(50%, -50%) rotate(180deg);
+
+                 }
+             }
+         }
+
+         .details_info {
+             h2 {
+                 @include heading_2($color: $item_bg_color, $padding: 0 0 10px)
+             }
+
+             p {
+                 @include paragraph()
+             }
+
+             .price_box {
+                 @include paragraph($f_size: 22px, $color: $item_bg_color );
+                 font-weight: 600;
+
+                 del {
+                     font-size: 16px;
+                     color: $primary_color;
+                 }
+             }
+
+             .star_icon {
+                 width: 100%;
+                 display: flex;
+                 align-items: center;
+                 padding: 5px 0;
+
+                 span {
+                     margin-right: 20px;
+
+                     i {
+                         @include icon($color: $primary_color, $width: 16px)
+                     }
+                 }
+             }
+
+             .size_box,
+             .food_type {
+                 padding-top: 20px;
+
+                 h6 {
+                     @include heading_6($padding: 0 0 5px);
+                     font-weight: 600;
+                 }
+
+                 .input_box {
+                     .name_box {
+                         width: 40%;
+                     }
+
+                     .price_box {
+                         width: 60%;
+                     }
+
+                     label,
+                     p {
+                         @include paragraph
+                     }
+
+                     input[type="checkbox"],
+                     input[type="radio"] {
+                         accent-color: $primary_color;
+                         border-color: $primary_color;
+                     }
+                 }
+             }
+
+             .quantity_box {
+                 padding-top: 20px;
+
+                 h6 {
+                     @include heading_6($padding: 0 0 5px);
+                     font-weight: 600;
+                 }
+
+                 button {
+                     margin: 5px;
+
+                     i {
+                         @include icon($bg_color: $primary_color, $color: $white_color, $border_radius: 50%);
+                         box-shadow: 0 0 4px rgba($black_color, 0.4)
+                     }
+                 }
+
+                 input {
+                     box-shadow: 0 0 4px rgba($black_color, 0.4);
+                     text-align: center;
+                     height: 30px;
+                     width: 60px;
+                     border-radius: 40px;
+                 }
+
+             }
+
+
+             .button_box {
+                 margin-top: 20px;
+                 @include hover_btn;
+
+                 button {
+                     margin-right: 12px;
+                 }
+             }
+         }
+     }
+ }
+
+ /*--===== End Menu Details Section Here =====--*/
+
+
+
+
+
+ /*--===== Start Description Section Here =====--*/
+ #description_section {
+     .nav_button {
+         display: flex;
+         align-items: center;
+         border-bottom: 1px solid $primary_color;
+
+         button {
+             @include btn($padding: 12px 45px, $bg_color: $section_bg_color, $color: $item_bg_color, );
+             transition: 0.4s;
+
+             &:hover {
+                 background-color: $primary_color;
+                 color: $white_color;
+             }
+         }
+
+         button.active {
+             background-color: $primary_color;
+             color: $white_color;
+         }
+     }
+
+     .description_info {
+         .spacer_p {
+             @include paragraph($padding: 25px 0);
+         }
+
+         .description_condition {
+             .condition_item {
+                 display: flex;
+                 align-items: center;
+
+                 span {
+                     width: 30px;
+                     height: 30px;
+                     margin-right: 10px;
+                 }
+
+                 p {
+                     @include paragraph
+                 }
+             }
+         }
+     }
+ }
+
+ /*--===== End Description Section Here =====--*/
+
+
+
+
+ /*--===== Start Related Section Here =====--*/
+ #related_section {
+     @extend #menu_section;
+     margin-top: 100px;
+
+     .section_box {
+         .related_top_part {
+             margin-bottom: 50px;
+
+             .heading_box {
+                 h3 {
+                     @include heading_3;
+                 }
+
+                 h2 {
+                     @include heading_2($color: $item_bg_color, )
+                 }
+             }
+
+             .arrow_box {
+                 .related_arrow {
+                     position: relative;
+
+                     .arrow {
+                         @include flex_center;
+                         @include after_before($width: 40px, $height: 40px, $right: 15px, $bottom: 0px, $bg_color: $primary_color, $border_radius: 50%, $z_index: 6);
+                         color: $white_color;
+                         transition: 0.4s;
+
+                         &:hover {
+                             background-color: $item_bg_color;
+                         }
+                     }
+
+                     .arrow_right {
+                         transform: rotate(180deg)
+                     }
+
+                     .arrow_left {
+                         right: 70px
+                     }
+                 }
+             }
+         }
+
+         .related_sliding {
+
+             .menu_item {
+                 margin: 12px;
+             }
+         }
+     }
+ }
+
+ /*--===== End Related Section Here =====--*/

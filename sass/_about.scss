@@ -1,0 +1,226 @@
+/*--===== Start Page Bannar Section Here =====--*/
+#page_bannar {
+    @include bg_image;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_before($content: '', $inset: 0, $bg_color: rgba($item_bg_color, 0.8), $z_index: -1, )
+    }
+
+    .page_bannar_info {
+        h2 {
+            @include heading_2($color: $white_color, $padding: 0 0 20px);
+            text-align: center;
+        }
+
+        .breadcrumb {
+            justify-content: center;
+
+            li {
+                &::before {
+                    color: $white_color;
+                }
+
+                a {
+                    @include paragraph($color: $white_color, );
+                    transition: 0.4s;
+
+                    &:hover {
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Page Bannar Section Here =====--*/
+
+
+/*--===== End About Company Section Here =====--*/
+#about_company_section {
+    margin: 100px 0;
+
+    .company_img {
+        position: relative;
+        padding-right: 100px;
+
+        img {
+            border-radius: 0 100px 100px 0;
+            overflow: hidden;
+        }
+
+        .discount_box {
+            @include discount_box($right: 0, $bottom: 50%, $z_index: 3, $width: 150px, $height: 150px, );
+            @include flex_center;
+            transform: translate(-25%, -50%);
+
+            h6 {
+                @include heading_6($f_size: 30px, $padding: 0 0 10px)
+            }
+
+            p {
+                @include paragraph($l_height: 20px, $color: $white_color, $f_size: 18px, );
+                font-weight: 600;
+            }
+        }
+
+        .personal_box {
+            @include after_before($width: 60%, $height: auto, $bg_color: $item_bg_color, $right: 0, $bottom: 0, );
+            padding: 20px;
+            color: $white_color;
+            border-radius: 0 50px 0 50px;
+            border: 5px solid $white_color;
+            box-shadow: 0 0 8px rgba($item_bg_color, 0.4);
+
+            p {
+                @include paragraph($color: $white_color, $padding: 0 0 10px);
+            }
+
+            h6 {
+                @include heading_6($color: $primary_color, );
+                text-align: right;
+            }
+        }
+    }
+
+    .company_info {
+        .company_info_top {
+            h3 {
+                @include heading_3($padding: 0 0 5px)
+            }
+
+            h2 {
+                @include heading_2($color: $item_bg_color)
+            }
+
+            p {
+                @include paragraph($color: $item_bg_color, $padding: 25px 0 30px)
+            }
+        }
+
+        .company_info_bottom {
+
+            .facility_item {
+                margin-bottom: 10px;
+
+                .facility_icon {
+                    margin-right: 20px;
+
+                    img {
+                        width: 120px;
+                    }
+                }
+
+                h6 {
+                    @include heading_6
+                }
+
+                p {
+                    @include paragraph($color: $paragraph_color, $padding: 10px 0, $l_height: 25px)
+                }
+            }
+        }
+    }
+}
+
+/*--===== End About Company Section Here =====--*/
+
+
+/*--===== Start Mission Section Here =====--*/
+#mission_section {
+    @include bg_image;
+    padding: 100px 0;
+
+    .mission_box {
+        .mission_item {
+            background-color: $item_bg_color;
+            margin: 20px 0;
+            padding: 20px 25px;
+            border-radius: 10px;
+
+            .mission_icon {
+                .rotate_box {
+                    @include flex_center;
+                    width: 60px !important;
+                    height: 60px !important;
+                    background-color: $primary_color;
+                    border-radius: 5px;
+
+                    transform: rotate(45deg);
+
+                    i {
+                        @include icon($bg_color: transparent, $color: $white_color, $f_size: 30px);
+                        transform: rotate(-45deg)
+                    }
+                }
+            }
+
+
+            .mission_info {
+                padding-left: 30px;
+
+                h6 {
+                    @include heading_6($color: $white_color, $padding: 0 0 10px)
+                }
+
+
+
+                p {
+                    @include paragraph($color: $white_color, $l_height: 25px)
+                }
+            }
+        }
+
+        .left_spacing {
+            margin-left: 100px;
+        }
+
+        .right_spacing {
+            margin-right: 100px;
+        }
+    }
+}
+
+/*--===== End Mission Section Here =====--*/
+
+/*--===== Start Whychoose Section Here =====--*/
+#whychoose_section {
+    margin: 100px 0;
+
+    .section_box {
+        .whychoose_top_part {
+            h3 {
+                @include heading_3($padding: 0 0 5px)
+            }
+
+            h2 {
+                @include heading_2($color: $item_bg_color, )
+            }
+
+            p {
+                @include paragraph($padding: 25px 0 30px, )
+            }
+        }
+
+        .whychoose_item {
+            background-color: $bg_color ;
+            margin: 12px;
+            padding: 20px 25px;
+            border-left: 5px solid $primary_color;
+            border-radius: 20px;
+            transform: skewX(-10deg);
+            box-shadow: 0 0 4px rgba($item_bg_color, 0.3);
+
+            .rotate_box {
+                @include icon($width: 60px, $height: 60px, $bg_color: $primary_color, $border_radius: 50%, $color: $white_color, $f_size: 30px);
+                transform: translateX(-100%) skewX(10deg);
+            }
+        }
+    }
+
+}
+
+/*--===== End Whychoose Section Here =====--*/

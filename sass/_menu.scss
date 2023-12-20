@@ -1,0 +1,67 @@
+ /*--===== Start Team Section Here =====--*/
+ #menu_menu_section {
+     @extend #menu_section;
+     margin: 100px 0;
+     background-color: $white_color;
+     padding: 0;
+
+     .menu_search_box {
+         margin: 20px 0;
+         background-color: $section_bg_color;
+         padding: 15px;
+         border-radius: 50px;
+
+         .input_box {
+             background-color: $white_color;
+             padding: 10px 25px;
+             border-radius: 40px;
+             border: 1px solid rgba($paragraph_color, 0.2);
+
+             input {
+                 width: 100%;
+                 background-color: transparent;
+             }
+         }
+
+         .sort_box {
+             background-color: $white_color;
+             padding: 10px 25px;
+             border-radius: 40px;
+             border: 1px solid rgba($paragraph_color, 0.2);
+
+             button {
+                 width: 100%;
+                 @include flex_center;
+                 justify-content: space-between !important
+             }
+
+             .sort_box {
+                 background-color: $white_color;
+                 @include flex_center;
+                 justify-content: space-between;
+
+                 option {
+                     width: 100% !important;
+                 }
+
+             }
+         }
+
+         .button_box {
+             @include hover_btn;
+             text-align: right;
+
+             button {
+                 width: 100%;
+             }
+         }
+
+     }
+
+     .pagination_box {
+         margin-top: 30px;
+         @include pagination;
+     }
+ }
+
+ /*--===== End Team Section Here =====--*/

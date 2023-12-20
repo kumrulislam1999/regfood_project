@@ -1,0 +1,262 @@
+/*--===== Start Checkout Section Here =====--*/
+#checkout_section {
+    margin: 100px 0;
+
+    .section_box {
+        .checkout_info {
+            .top_part {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px solid $primary_color;
+                padding-bottom: 10px;
+
+                .add_address_btn {
+                    @include btn($bg_color: $primary_color, $color: $white_color);
+                    border-radius: 30px;
+                }
+            }
+
+            .address_box {
+                padding: 30px 0;
+
+                .address_item {
+                    border-radius: 10px;
+                    background-color: $bg_color;
+                    margin: 12px 0;
+                    padding: 21px;
+
+                    .name_box {
+                        border-bottom: 1px solid rgba($primary_color, 0.5);
+                        padding-bottom: 5px;
+
+                        label {
+                            @include paragraph($color: $primary_color, $padding: 0);
+
+                            i {
+                                @include icon($color: $primary_color, $width: 16px, $height: 16px);
+                                margin: 0 5px 0 10px
+                            }
+                        }
+                    }
+
+                    p {
+                        @include paragraph($padding: 10px 0);
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .form_box {
+                margin: 40px 0;
+                background-color: $white_color;
+
+                h4 {
+                    @include heading_4();
+                    text-align: left;
+                }
+
+                .input_box {
+                    margin: 12px 0;
+
+                    label {
+                        @include paragraph($color: $item_bg_color, $f_size: 18px);
+                        font-weight: 700;
+                        display: block;
+                        padding-bottom: 5px;
+                    }
+
+                    input,
+                    select {
+                        border: 1px solid rgba($paragraph_color, 0.2);
+                        padding: 10px 15px;
+                        width: 100%;
+                    }
+                }
+
+                h4 {
+                    @include heading_4($color: $item_bg_color, $margin: 15px 0 30px, $padding: 0 0 5px, );
+                    border-bottom: 1px solid $primary_color
+                }
+
+                textarea {
+                    border: 1px solid rgba($paragraph_color, 0.2);
+                    padding: 10px 15px;
+                    width: 100%;
+                    resize: none;
+                }
+
+                button {
+                    @include btn($color: $white_color, $bg_color: $primary_color);
+                    width: 100%;
+                    border-radius: 30px;
+                    margin-top: 24px
+                }
+
+            }
+        }
+
+        .checkout_cart {
+            padding: 40px 30px;
+            border-radius: 10px;
+            background-color: $section_bg_color;
+
+            h5 {
+                @include heading_5;
+                font-weight: 700;
+                padding-bottom: 10px;
+            }
+
+            .subtotal_box {
+                padding: 10px 0;
+                border-top: 1px solid $primary_color;
+                border-bottom: 1px solid $primary_color;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 10px;
+
+                    span {
+                        @include paragraph;
+                        font-weight: 600
+                    }
+                }
+            }
+
+            .total_price_box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 15px 0 15px;
+
+                h6 {
+                    @include heading_6
+                }
+            }
+
+            form {
+
+                .coupon_box {
+                    background-color: $white_color;
+                    padding: 5px;
+                    margin: 25px 0 12px;
+                    border: 1px solid rgba($primary_color, 0.5);
+                    border-radius: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 100%;
+                        padding: 0 10px;
+                    }
+
+                    button {
+                        background-color: $primary_color;
+                        color: $white_color;
+                        padding: 5px 20px;
+                        border-radius: 40px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color
+                        }
+                    }
+                }
+
+                .checkout_button {
+                    background-color: $primary_color;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 30px;
+                    margin-top: 12px;
+                    color: $white_color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    transition: 0.4s;
+
+                    &:hover {
+                        background-color: $item_bg_color;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*--===== End Checkout Section Here =====--*/
+
+
+
+/*--=====  ‍Start Checkout Section Here =====--*/
+#form_section {
+    @extend #checkout_section;
+    @include flex_center;
+    background-color: rgba($black_color, 0.8);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    z-index: 1002;
+    overflow-y: scroll;
+    margin: 0;
+    @include show_hide($opacity: 0, $visivility: hidden, $transform: scale(0));
+    transition: 0.4s;
+
+    .section_box {
+        .form_box {
+            padding: 60px 40px !important;
+            border-radius: 20px;
+            width: 80%;
+            position: relative;
+            height: 100vh;
+            width: 60%;
+            overflow-y: scroll;
+            margin: 0;
+
+            h4 {
+                background-color: rgba($primary_color, 0.3);
+                padding: 15px !important;
+                border-radius: 10px;
+                text-align: center !important;
+            }
+
+            .checkout_popup_close {
+                position: absolute;
+                right: 40px;
+                top: 10px;
+                width: 60px !important;
+                height: 60px !important;
+                @include flex_center;
+                box-shadow: 0 0 6px rgba($black_color, 0.3);
+                transform: 0.4s;
+                transform: translate(50%, -50%);
+
+                i {
+                    font-size: 35px;
+                    transition: 0.4s;
+                }
+
+                &:hover {
+                    background-color: $white_color !important;
+
+                    i {
+                        transform: rotate(180deg);
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+#form_section.active {
+    @include show_hide($transform: scale(1), $opacity: 1, $visivility: visible)
+}
+
+/*--===== End Checkout Section Here =====--*/

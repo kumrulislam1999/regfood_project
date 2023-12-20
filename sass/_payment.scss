@@ -1,0 +1,109 @@
+/*--===== Start Payment Section Here =====--*/
+#payment_section {
+    margin: 100px 0;
+
+    .section_box {
+        .payment_cart_img {
+            a {
+                width: 100%;
+                margin: 12px 0;
+
+                img {
+                    height: 130px;
+                    width: 100%
+                }
+            }
+        }
+
+        .checkout_cart {
+            padding: 40px 30px;
+            border-radius: 10px;
+            background-color: $section_bg_color;
+
+            h5 {
+                @include heading_5;
+                font-weight: 700;
+                padding-bottom: 10px;
+            }
+
+            .subtotal_box {
+                padding: 10px 0;
+                border-top: 1px solid $primary_color;
+                border-bottom: 1px solid $primary_color;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 10px;
+
+                    span {
+                        @include paragraph;
+                        font-weight: 600
+                    }
+                }
+            }
+
+            .total_price_box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 15px 0 15px;
+
+                h6 {
+                    @include heading_6
+                }
+            }
+
+            form {
+
+                .coupon_box {
+                    background-color: $white_color;
+                    padding: 5px;
+                    margin: 25px 0 12px;
+                    border: 1px solid rgba($primary_color, 0.5);
+                    border-radius: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 100%;
+                        padding: 0 10px;
+                    }
+
+                    button {
+                        background-color: $primary_color;
+                        color: $white_color;
+                        padding: 5px 20px;
+                        border-radius: 40px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color
+                        }
+                    }
+                }
+
+                .checkout_button {
+                    background-color: $primary_color;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 30px;
+                    margin-top: 12px;
+                    color: $white_color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    transition: 0.4s;
+
+                    &:hover {
+                        background-color: $item_bg_color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Payment Section Here =====--*/

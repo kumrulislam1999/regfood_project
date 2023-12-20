@@ -1,0 +1,13 @@
+/*--=====Start Testimonial Section Here=====--*/
+#testimonial_main_section {
+    @extend #testimonail_section;
+    background-color: $white_color !important;
+    padding-top: 50px;
+
+    .pagination_box {
+        margin-top: 50px;
+        @include pagination
+    }
+}
+
+/*--=====Start Testimonial Section Here=====--*/

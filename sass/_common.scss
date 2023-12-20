@@ -1,0 +1,340 @@
+/*--===== Start Heading Mixin Here =====--*/
+
+
+@mixin heading_1($f_size: 58px, $l_height: 68px, $color: $white_color, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 800;
+}
+
+@mixin heading_2($f_size: 35px, $l_height: 42px, $color: $item_bg_color, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 800;
+}
+
+@mixin heading_3($f_size: 30px, $l_height: 36px, $color: $primary_color, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 800;
+}
+
+@mixin heading_4($f_size: 24px, $l_height: 28px, $color: default, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 800;
+}
+
+@mixin heading_5($f_size: 20px, $l_height: 25px, $color: default, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 800;
+}
+
+@mixin heading_6($f_size: 18px, $l_height: 24px, $color: default, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 800;
+}
+
+/*--===== End Heading Mixin Here =====--*/
+
+
+
+
+/*--===== Start Paragraph Mixin Here =====--*/
+@mixin paragraph($f_size: 16px, $l_height: 28px, $color: $paragraph_color, $padding: default, $margin: default) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 400;
+}
+
+/*--===== End Paragraph Mixin Here =====--*/
+
+
+
+/*--===== Start Button Mixin Here =====--*/
+@mixin btn($f_size: 16px, $l_height: 28px, $color: $primary_color, $bg_color: default, $padding: 6px 25px, $margin: default, $border_radius: default, ) {
+    font-size: $f_size;
+    line-height: $l_height;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 600;
+    background-color: $bg_color;
+    border-radius: $border_radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+@mixin hover_btn {
+
+    button,
+    a {
+        position: relative;
+
+        span {
+            @include btn($bg_color: $primary_color, $color: $white_color, $border_radius: 40px, $padding: 8px 40px);
+            font-weight: 800;
+            transition: 0.4s;
+        }
+
+        .span_hover {
+            @include after_before($width: 0, $inset: 0, $bg_color: $item_bg_color, $z_index: 4);
+            opacity: 0;
+            visibility: hidden;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.4s;
+
+
+            i {
+                @include icon($width: 14px, $height: 24px, $color: $white_color);
+            }
+        }
+
+        &:hover {
+            .span_hover {
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+                transform: scaleX(1);
+                transition: 0.4s;
+            }
+
+        }
+
+    }
+}
+
+
+@mixin pagination {
+    .page-item {
+        margin: 0 10px;
+
+        a {
+            @include flex_center;
+            @include icon($bg_color: $white_color, $color: $item_bg_color, $width: 40px, $height: 40px, $border_radius: 50%);
+            box-shadow: 0 0 8px rgba($black_color, 0.3);
+            transition: 0.4s;
+
+            i {
+                font-size: 20px;
+            }
+
+            .right_arrow {
+                transform: rotate(180deg)
+            }
+
+            &:hover {
+                background-color: $primary_color;
+                color: $white_color;
+            }
+        }
+
+        a.active {
+            background-color: $primary_color;
+            color: $white_color;
+        }
+    }
+}
+
+
+
+@mixin dashboard_nav {
+    .dashboard_nav {
+        background-color: $primary_color;
+
+        .personal_img_box {
+            width: 100%;
+            text-align: center;
+            padding: 35px;
+            margin: auto;
+
+            .img_box {
+                position: relative;
+                background: none;
+                width: 130px;
+                height: 130px;
+                margin: auto;
+
+                img {
+                    width: 130px;
+                    height: 130px;
+                    border: 5px solid $white_color;
+                    border-radius: 50%;
+                }
+
+                button {
+                    @include icon($bg_color: $white_color, $color: $item_bg_color, $border_radius: 50%, );
+                    transition: 0.4s;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0px;
+                    z-index: 10;
+
+                    &:hover {
+                        background-color: $item_bg_color;
+                        color: $white_color,
+                    }
+                }
+            }
+
+            h6 {
+                @include heading_6($color: $white_color, $padding: 20px 0 0);
+            }
+
+        }
+
+        .nav_list {
+            margin-top: 12px;
+            padding: 1px;
+
+            li {
+                a {
+                    @include btn($bg_color: $primary_color, $color: $white_color, $padding: 0, $margin: 0);
+                    text-align: left !important;
+                    justify-content: left;
+                    width: 100%;
+                    gap: 0 !important;
+                    transition: 0.4s;
+
+                    i {
+                        @include icon($bg_color: rgba($white_color, 0.2), $color: $white_color, $width: 50px, $height: 50px, );
+                        margin: 0;
+                        border: 1px solid transparent;
+                    }
+
+                    span {
+                        border: 1px solid rgba($bg_color, 0.4);
+                        width: 100%;
+                        height: 50px;
+                        border-bottom: none;
+                        line-height: 50px;
+                        padding: 0 20px;
+                    }
+
+                    .bottom_border {
+                        border-bottom: 1px solid rgba($bg_color, 0.4);
+                    }
+
+                    &:hover {
+                        background-color: rgba($bg_color, 0.4)
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Button Mixin Here =====--*/
+
+
+
+
+
+/*--===== Start Social Icon Mixin Here =====--*/
+@mixin icon($width: 36px, $height: 36px, $bg_color: transparent, $color: $primary_color, $f_size: 16px, $border_color: transparent, $border_width: 1px, $border_style: solid, $border_radius: default, $padding: default, $margin: default) {
+    width: $width;
+    height: $height;
+    line-height: $height;
+    color: $color;
+    background-color: $bg_color;
+    font-size: $f_size;
+    border: $border_width $border_style $border_color;
+    border-radius: $border_radius;
+    padding: $padding;
+    margin: $margin;
+    text-align: center;
+}
+
+/*--===== End Social Icon Mixin Here =====--*/
+
+
+/*--===== Start After/Before Mixin Here =====--*/
+@mixin bg_image($bg_position: center, $bg_repeat: no-repeat, $bg_size: cover) {
+    background-position: $bg_position;
+    background-repeat: $bg_repeat;
+    background-size: $bg_size;
+}
+
+@mixin flex_center($display: flex, $align_items: center, $justify_content: center, ) {
+    display: $display;
+    align-items: $align_items;
+    justify-content: $justify_content;
+}
+
+@mixin after_before($position: absolute, $content: default, $bg_color: default, $width: 100%, $height: 100%, $top: default, $bottom: default, $left: default, $right: default, $inset: default, $z_index: default, $border_radius: default, ) {
+    content: $content;
+    position: $position;
+    width: $width;
+    height: $height;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    inset: $inset;
+    z-index: $z_index;
+    background-color: $bg_color;
+    border-radius: $border_radius;
+
+}
+
+
+@mixin discount_box($position: absolute, $bg_color: $primary_color, $width: 100px, $height: 100px, $top: default, $bottom: default, $left: default, $right: default, $inset: default, $z_index: default, $border_radius: 50%, $color: $white_color, $border_width: 5px, $border_color: $white_color, $f_size: 20px, $f_weight: 800, $l_height: default, $padding: 15px, ) {
+    position: $position;
+    width: $width;
+    height: $height;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    inset: $inset;
+    z-index: $z_index;
+    background-color: $bg_color;
+    border-radius: $border_radius;
+    border: $border_width solid $border_color;
+    color: $color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    padding: $padding;
+    text-align: center;
+}
+
+/*--===== End After/Before Mixin Here =====--*/
+
+
+
+/*--===== Start Show/Hide Mixin Here =====--*/
+@mixin show_hide($opacity: default, $visivility: default, $transform: default, $display: default) {
+    opacity: $opacity;
+    visibility: $visivility;
+    transform: $transform;
+    display: $display;
+}
+
+/*--===== End Show/Hide Mixin Here =====--*/

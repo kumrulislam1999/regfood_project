@@ -1,0 +1,49 @@
+/*--===== Start Privacy Section Here =====--*/
+#privacy_section {
+    margin: 100px 0;
+
+    .section_box {
+        .privacy_info {
+            h3 {
+                @include heading_3($color: $item_bg_color, $padding: 10px 0)
+            }
+
+            p {
+                @include paragraph($padding: 10px 0)
+            }
+
+            .condition_box {
+                .condition_item {
+                    display: flex;
+                    align-items: center;
+                    ;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    p {
+                        padding: 5px 10px
+                    }
+                }
+            }
+
+            .button_box {
+                @include hover_btn;
+                margin-top: 20px;
+
+                a {
+                    transition: 0.4s;
+
+                    .span_hover {
+                        padding: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Privacy Section Here =====--*/

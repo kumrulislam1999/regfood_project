@@ -1,0 +1,115 @@
+#dashboard {
+    margin: 100px 0;
+
+    .section_box {
+        background-color: $bg_color;
+        box-shadow: 0 0 10px rgba($primary_color, 0.4);
+
+        .dashboard_box {
+            @include dashboard_nav;
+        }
+
+        .dashboard_info {
+
+            .personal_info_box {
+                .heading_box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 25px 0;
+
+                    h3 {
+                        @include heading_3($color: $item_bg_color, )
+                    }
+
+                    button {
+                        @include btn($bg_color: $primary_color, $color: $white_color, $border_radius: 30px, )
+                    }
+                }
+
+                .info_box {
+                    background-color: $white_color;
+
+                    .info_item {
+                        box-shadow: 0 0 3px rgba($black_color, 0.2);
+                        padding: 15px 20px;
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            @include paragraph
+                        }
+
+                        .info_heading {
+                            width: 15%;
+
+                            p {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .personal_info_box.hide {
+                @include show_hide($opacity: 0, $visivility: hidden, $display: none)
+            }
+
+            .edit_info_box {
+                @include show_hide($opacity: 0, $visivility: hidden, $display: none);
+
+                .heading_box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 25px 0;
+
+                    h3 {
+                        @include heading_3($color: $item_bg_color, )
+                    }
+
+                    button {
+                        @include btn($bg_color: $primary_color, $color: $white_color, $border_radius: 30px, )
+                    }
+                }
+
+                .edit_box {
+                    background-color: $white_color;
+
+                    .form_box {
+                        padding: 20px;
+
+                        .input_box {
+                            margin: 12px 0;
+
+                            label {
+                                display: block;
+                                width: 100%;
+                                @include paragraph($f_size: 18px, $color: $item_bg_color);
+                                margin-bottom: 8px;
+                            }
+
+                            input,
+                            textarea {
+                                display: block;
+                                width: 100%;
+                                padding: 12px 20px;
+                                box-shadow: 0 0 8px rgba($black_color, 0.2)
+                            }
+                        }
+
+                        .button_box {
+                            margin-top: 20px;
+                            @include hover_btn;
+                        }
+                    }
+                }
+            }
+
+            .edit_info_box.show {
+                @include show_hide($opacity: 1, $visivility: visible, $display: block)
+            }
+        }
+    }
+}

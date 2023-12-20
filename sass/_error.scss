@@ -1,0 +1,29 @@
+  /*--===== Start Page Bannar Section Here =====--*/
+  #error_section {
+      margin: 50px 0;
+
+      .section_box {
+          .error_info {
+              text-align: center;
+
+              img {
+                  padding-bottom: 30px;
+                  width: 100%;
+              }
+
+              h2 {
+                  @include heading_2;
+              }
+
+              p {
+                  @include paragraph($padding: 10px 0 20px)
+              }
+
+              .button_box {
+                  @include hover_btn;
+              }
+          }
+      }
+  }
+
+  /*--===== End Page Bannar Section Here =====--*/

@@ -1,0 +1,217 @@
+/*--===== Start Cart View Section Here =====--*/
+#cart_view_section {
+    margin: 100px 0;
+    overflow: hidden;
+
+    .cart_box {
+        text-align: center;
+        background-color: $bg_color;
+        min-width: 992px;
+
+        th,
+        td {
+            border: 2px solid rgba($white_color, 1);
+
+
+        }
+
+        .info_box {
+            margin: 15px 20px;
+        }
+
+        .heading_box {
+            background-color: $primary_color;
+
+            h6 {
+                @include heading_6($color: $white_color, $padding: 15px);
+            }
+        }
+
+        .details_box {
+
+
+            .img_box {
+                width: 200px;
+                margin: auto;
+
+                img {
+                    width: 100% !important;
+
+                }
+            }
+
+
+            .name_box {
+                text-align: left;
+                min-width: 200px;
+
+                h6 {
+                    a {
+                        @include heading_6($color: $item_bg_color);
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: $primary_color;
+                        }
+                    }
+
+                }
+
+                p {
+                    @include paragraph($padding: 5px 0)
+                }
+
+                .size {
+                    color: $primary_color;
+                }
+            }
+
+            p {
+                @include paragraph($f_size: 20px, $color: $item_bg_color);
+                font-weight: 700;
+            }
+
+            .quantity_box {
+                align-items: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+
+                button {
+                    i {
+                        @include icon($bg_color: $primary_color, $width: 40px, $height: 40px, $border_radius: 50%, $color: $white_color, $f_size: 20px);
+                        font-weight: 800;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color;
+                        }
+                    }
+                }
+
+                input {
+                    height: 40px;
+                    width: 80px;
+                    background-color: $white_color;
+                    text-align: center;
+                    border-radius: 40px;
+                    border: 1px solid rgba($paragraph_color, 0.2);
+                    ;
+                }
+            }
+
+            i {
+                @include icon($f_size: 40px, $color: $item_bg_color );
+                font-weight: 800;
+                transition: 0.4s;
+                margin: 0 20px;
+
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+
+    .total_cart_box {
+        padding-top: 50px;
+        align-items: stretch !important;
+
+        .total_cart_img {
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .total_cart_info {
+            padding: 35px;
+            background-color: $section_bg_color;
+
+            h5 {
+                @include heading_5;
+                font-weight: 700;
+                padding-bottom: 10px;
+            }
+
+            .subtotal_box {
+                padding: 10px 0;
+                border-top: 1px solid $primary_color;
+                border-bottom: 1px solid $primary_color;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        @include paragraph;
+                        font-weight: 600
+                    }
+                }
+            }
+
+            .total_price_box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 11px 0 15px;
+
+                h6 {
+                    @include heading_6
+                }
+            }
+
+            form {
+
+                .coupon_box {
+                    background-color: $white_color;
+                    padding: 5px;
+                    border: 1px solid rgba($primary_color, 0.5);
+                    border-radius: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 100%;
+                        padding: 0 10px;
+                    }
+
+                    button {
+                        background-color: $primary_color;
+                        color: $white_color;
+                        padding: 5px 20px;
+                        border-radius: 40px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color
+                        }
+                    }
+                }
+
+                .checkout_button {
+                    background-color: $primary_color;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 30px;
+                    margin-top: 12px;
+                    color: $white_color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    transition: 0.4s;
+
+                    &:hover {
+                        background-color: $item_bg_color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*--===== End Cart View Section Here =====--*/

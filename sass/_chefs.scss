@@ -1,0 +1,19 @@
+ /*--===== Start Team Section Here =====--*/
+ #chefs_team_section {
+     @extend #team_section;
+
+     .section_box {
+         .team_box {
+             .team_item {
+                 margin: 12px 0;
+             }
+         }
+
+         .pagination_box {
+             margin-top: 30px;
+             @include pagination
+         }
+     }
+ }
+
+ /*--===== End Team Section Here =====--*/

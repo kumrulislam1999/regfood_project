@@ -1,0 +1,101 @@
+ /*--===== Start Contact Section Here =====--*/
+ #contact_section {
+     margin: 100px 0;
+
+     .section_box {
+         .contact_info {
+             background-color: $bg_color;
+
+             .contact_info_item {
+                 text-align: center;
+                 padding: 40px 0px;
+                 margin: 0 40px;
+
+                 h4 {
+                     @include heading_4($color: $primary_color, $padding: 0 0 15px)
+                 }
+
+                 p {
+                     @include paragraph($paragraph_color)
+                 }
+             }
+
+             .contact_info_item:nth-child(2) {
+                 border-top: 1px solid rgba($primary_color, 0.5);
+                 border-bottom: 1px solid rgba($primary_color, 0.5)
+             }
+         }
+
+         .contact_form {
+             background-color: $bg_color;
+             padding: 30px;
+
+             .form_box {
+                 .input_box {
+                     margin: 12px 0;
+                     background-color: $white_color;
+                     padding: 12px 20px 12px 65px;
+                     position: relative;
+
+                     .icon_box {
+                         background-color: rgba($primary_color, 0.2);
+                         height: 100% !important;
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         bottom: 0;
+                         padding: 12px 0;
+                         transition: 0.4s;
+
+                         label {
+                             width: 100%;
+                             height: 100%;
+
+                             i {
+                                 @include icon($color: $primary_color, $f_size: 20px, $width: 50px, $height: 36px, )
+                             }
+                         }
+
+                         &:hover {
+                             background-color: $primary_color;
+
+                             i {
+                                 color: $white_color;
+                             }
+                         }
+                     }
+
+                     input,
+                     textarea {
+                         width: 100%;
+                         padding: 10px 15px;
+                         background-color: $white_color;
+                         resize: none;
+                     }
+
+                 }
+             }
+
+             .button_box {
+                 @include hover_btn;
+                 margin: 13px 0 0;
+             }
+         }
+     }
+ }
+
+ /*--===== End Contact Section Here =====--*/
+
+
+ /*--===== Start Contact Map Section Here =====--*/
+ #contact_map_section {
+     margin-bottom: 100px;
+     height: 350px;
+
+     iframe {
+         width: 100%;
+         height: 350px;
+     }
+ }
+
+ /*--===== End Contact Map Section Here =====--*/

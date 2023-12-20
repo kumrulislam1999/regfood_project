@@ -1,0 +1,45 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+p,
+small,
+div,
+span {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+a,
+a:hover {
+    text-decoration: none;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select,
+option {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}

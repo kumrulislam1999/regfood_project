@@ -1,0 +1,1351 @@
+/*--===== Start TopBar Section Here =====--*/
+#topBar_section {
+    background-color: $item_bg_color;
+
+    .topBar_left {
+        position: relative;
+        padding: 5px 0;
+        z-index: 1;
+
+        &::after {
+            @include after_before($bg_color: $primary_color, $content: "", $inset: 0, $z_index: -1);
+            transform: skewX(-45deg);
+        }
+
+        .contact_icon {
+            justify-content: center;
+
+            li {
+                margin-right: 30px;
+
+                a {
+                    @include paragraph($f_size: 16px, $l_height: 50px, $color: $white_color, );
+                    font-weight: 800;
+                    transition: 0.4s;
+
+                    i {
+                        @include icon($f_size: 25px, $color: $white_color, );
+                        transition: 0.4s;
+                    }
+
+                    &:hover {
+                        color: $item_bg_color;
+
+                        i {
+                            color: $item_bg_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .topBar_right {
+        .social_icon {
+            justify-content: end;
+
+            li {
+                margin: 0 5px;
+
+                a {
+                    @include icon($color: $white_color, $border_radius: 50%, $bg_color: $primary_color, $f_size: 20px);
+                    transition: 0.4s;
+
+                    &:hover {
+                        background-color: $white_color;
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End TopBar Section Here =====--*/
+
+/*--===== Start Header Section Here =====--*/
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $white_color;
+    z-index: 999;
+
+    .navbar {
+        margin: 0;
+        padding: 0;
+
+        .navbar-brand {
+            img {
+                width: 100px;
+            }
+        }
+
+        #primary_nav {
+            .navbar-nav {
+                text-align: center;
+
+                li {
+                    margin: 0 5px;
+
+                    a {
+                        color: $item_bg_color;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 28px;
+                        text-transform: uppercase;
+                        padding: 15px 25px;
+                        position: relative;
+                        transition: 0.4s;
+
+                        span.line {
+                            @include after_before($height: 1px, $width: 0, $left: 0, $bottom: 5px, $bg_color: $primary_color, );
+                            transition: 0.4s linear 0.2s;
+                        }
+
+                        .toggler {
+                            @include after_before($bg_color: transparent, $width: 15px, $height: 15px, $right: 0, $top: 50%);
+                            border-right: 5px solid $toggler_border_1;
+                            border-bottom: 5px solid $toggler_border_4;
+                            transform: translateY(-70%) rotate(45deg);
+                            animation: toggler 2s linear infinite;
+                        }
+
+                        @keyframes toggler {
+                            0% {
+                                border-right-color: $toggler_border_1;
+                                border-bottom-color: $toggler_border_4;
+                            }
+
+                            20% {
+                                border-right-color: $toggler_border_2;
+                                border-bottom-color: $toggler_border_3;
+                            }
+
+                            40% {
+                                border-right-color: $toggler_border_5;
+                                border-bottom-color: $toggler_border_6;
+                            }
+
+                            60% {
+                                border-right-color: $toggler_border_2;
+                                border-bottom-color: $toggler_border_1;
+                            }
+
+                            80% {
+                                border-right-color: $toggler_border_6;
+                                border-bottom-color: $toggler_border_3;
+                            }
+
+                            100% {
+                                border-right-color: $toggler_border_1;
+                                border-bottom-color: $toggler_border_4;
+                            }
+                        }
+
+                        &::before {
+                            @include after_before($height: 1px, $width: 0, $left: 0, $bottom: 3px, $bg_color: $primary_color, $content: '', );
+                            transition: 0.4s linear 0.1s;
+                        }
+
+                        &::after {
+                            @include after_before($height: 1px, $width: 0, $left: 0, $bottom: 1px, $bg_color: $primary_color, $content: '', );
+                            transition: 0.4s linear;
+                        }
+
+
+
+                        &:hover {
+                            color: $primary_color;
+
+                            &::after {
+                                width: 100%;
+                            }
+
+                            &::before {
+                                width: 100%;
+                            }
+
+                            span.line {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    a.active {
+
+                        &::after,
+                        &::before,
+                        span.line {
+                            width: 100%
+                        }
+                    }
+
+                    .dropdown-menu {
+                        overflow-y: scroll;
+                    }
+                }
+
+
+
+
+            }
+
+            .right_icon_menu {
+                li {
+                    margin: 0 10px;
+
+                    a {
+                        @include icon($f_size: 25px, $bg_color: rgba($primary_color, 0.2), $width: 40px, $height: 40px, $color: $item_bg_color, $border_radius: 50%, );
+                        font-weight: 800;
+                        transition: 0.4s;
+                        position: relative;
+
+                        .notification {
+                            @include after_before($width: 24px, $height: 24px, $bg_color: $primary_color, $top: 0, $right: 0, $z_index: 2);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            transform: translate(50%, -50%);
+                            border: 1px solid transparent;
+                            transition: 0.4s;
+                            font-weight: 400;
+                            font-size: 16px;
+                        }
+
+                        &:hover {
+                            background-color: $primary_color;
+                            color: $white_color ;
+
+                            .notification {
+                                border-color: $white_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Header Section Here =====--*/
+
+/*--===== Start Hero Section Here =====--*/
+#hero_section {
+    @include bg_image;
+    height: 800px;
+    z-index: 1;
+    position: relative;
+
+    &::after {
+        @include after_before($content: '', $inset: 0, $bg_color: rgba($item_bg_color, 0.5), $z_index: -1, )
+    }
+
+    .hero_left {
+
+        h1 {
+            @include heading_1;
+        }
+
+        h3 {
+            @include heading_3;
+        }
+
+        p {
+            @include paragraph($color: $white_color, $padding: 16px 0 28px, $f_size: 18px, $l_height: 32px, )
+        }
+
+        .search_box {
+            background-color: rgba($white_color, 0.9);
+            border-radius: 50px;
+            padding: 10px;
+
+            form {
+                background-color: $white_color;
+                border: 1px solid rgba($paragraph_color, 0.4);
+                border-radius: 50px;
+                padding: 6px 10px;
+
+                input {
+                    @include paragraph($padding: 8px 20px, $color: $item_bg_color);
+                    width: 100%;
+                }
+
+                .button_box {
+                    @include hover_btn;
+                }
+            }
+
+        }
+    }
+
+    .hero_right {
+        position: relative;
+        z-index: 2;
+        border-radius: 50%;
+        background-color: rgba($item_bg_color, 0.1);
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+            transform: scale(0.9);
+        }
+
+        .dicount_box {
+            @include discount_box($width: 140px, $height: 140px, $border_radius: 50%, $top: 0, $left: 0, $z_index: 10, );
+            @include flex_center;
+            transform: translate(25%);
+
+            p {
+                @include heading_3($color: $white_color, $f_size: 30px);
+            }
+        }
+
+        .main_circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: 0.4s;
+            z-index: -1;
+            animation: move_round_hero_1 5s linear infinite;
+
+            .circle {
+                @include after_before($right: 0, $top: 0, $width: 50%, $height: 50%, $bg_color: $primary_color, );
+            }
+
+            .circle_2 {
+                background-color: $white_color;
+                left: 0;
+            }
+        }
+
+        @keyframes move_round_hero_1 {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+
+        }
+
+
+    }
+}
+
+/*--===== End Hero Section Here =====--*/
+
+/*--===== Start Offer Section Here =====--*/
+#offer_section {
+    padding: 100px 0;
+    background-color: rgba($black_color, 0.1);
+
+    .section_box {
+        .offer_top_part {
+            margin-bottom: 50px;
+
+            .heading_box {
+                h3 {
+                    @include heading_3($padding :0 0 10px);
+                }
+
+                h2 {
+                    @include heading_2
+                }
+            }
+
+            .arrow_box {
+                .offer_arrow {
+                    position: relative;
+
+                    .arrow {
+                        @include flex_center;
+                        @include after_before($width: 40px, $height: 40px, $right: 15px, $bottom: 0px, $bg_color: $primary_color, $border_radius: 50%, $z_index: 6);
+                        color: $white_color;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color;
+                        }
+                    }
+
+                    .arrow_right {
+                        transform: rotate(180deg)
+                    }
+
+                    .arrow_left {
+                        right: 70px
+                    }
+                }
+            }
+        }
+
+        .offer_sliding {
+            .offer_item {
+                @include bg_image;
+                position: relative;
+                margin: 0 12px;
+
+                .offer_item_info {
+                    width: 50%;
+                    margin-left: auto;
+                    padding: 45px 30px 45px 0;
+
+                    a {
+                        h6 {
+                            @include heading_6($color: $item_bg_color);
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+
+                    p {
+                        @include paragraph($padding: 5px 0 15px)
+                    }
+
+                    .social_icon {
+                        li {
+                            margin: 0 5px;
+
+                            a {
+                                @include icon($bg_color: $primary_color, $border_radius: 50%, $color: $white_color );
+                                transition: 0.4s;
+
+                                &:hover {
+                                    background-color: $item_bg_color
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .dicount_circle {
+                    @include after_before($width: 70px, $height: 70px, $left: 40%, $top: 50%, $bg_color: $primary_color, );
+                    @include flex_center;
+                    border-radius: 50%;
+                    border: 3px solid $white_color;
+                    transform: translate(-100%, -100%);
+
+
+                    p {
+                        @include paragraph($color: $white_color, $l_height: 20px);
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Offer Section Here =====--*/
+
+/*--===== Start Booking Section Here =====--*/
+
+#booking_section {
+    margin: 100px 0;
+
+    .section_box {
+        @include bg_image;
+
+        .booking_right {
+            background-color: rgba($primary_color, 0.7);
+
+            .booking_form {
+                padding: 50px;
+
+                h2 {
+                    @include heading_2($color: $white_color, $margin: 0 0 25px, $padding: 0 0 10px, );
+                    position: relative;
+
+                    &::after {
+                        @include after_before($content: "", $width: 100%, $height: 1px, $bg_color: $white_color, $left: 0, $bottom: 0, )
+                    }
+                }
+
+                form {
+                    .input_box {
+                        margin: 12px 0;
+
+                        label {
+                            @include paragraph($color: $white_color, $padding: 0 0 5px, );
+                            font-weight: 600;
+                        }
+
+                        input,
+                        select {
+                            width: 100%;
+                            padding: 10px 20px;
+                            background-color: $white_color ;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    button {
+                        @include btn($color: $white_color, $bg_color: $item_bg_color, $margin: 12px auto, $padding: 10px 20px, );
+                        position: relative;
+
+                        span {
+                            @include flex_center;
+                            @include after_before($inset: 0, $bg_color: $primary_color, $z_index: 7);
+                            color: $white_color;
+                            transition: 0.4s;
+                            @include show_hide($opacity: 0, $visivility: hidden, $transform: scaleX(0));
+                            transform-origin: left;
+
+                            i {
+                                @include icon($color: $white_color, );
+                                transform: rotate(180deg)
+                            }
+                        }
+
+                        &:hover {
+                            span {
+                                @include show_hide($opacity: 1, $visivility: visible, $transform: scaleX(1))
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Booking Section Here =====--*/
+
+/*--===== Start Menu Section Here =====--*/
+#menu_section {
+    padding-bottom: 100px;
+
+    .section_box {
+        .menu_top_part {
+            margin-bottom: 50px;
+
+            .heading_box {
+
+                h3 {
+                    @include heading_3
+                }
+
+                h2 {
+                    @include heading_2;
+                }
+            }
+
+            .menu_nav_box {
+                .menu_navbar {
+                    li {
+                        margin: 0 5px;
+
+                        a {
+                            @include btn($padding: 6px 20px, $color: $primary_color, );
+                            border: 1px solid $primary_color;
+                            border-radius: 10px;
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: $white_color;
+                                background-color: $primary_color;
+                                border-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu_item {
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 4px rgba($black_color, 0.2);
+            padding: 10px;
+            margin: 12px 0px;
+            background-color: $white_color;
+
+            .img_box {
+                border-radius: 10px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                    transition: 0.4s;
+                }
+            }
+
+            .info_box {
+                padding: 30px 10px 20px;
+                position: relative;
+
+                h6 {
+                    @include heading_6
+                }
+
+                p {
+                    i {
+                        @include icon($width: 14px, $height: 14px, $color: $primary_color, $margin: 16px 0, )
+                    }
+
+                    span {
+                        @include paragraph($color: $primary_color, $margin: 0 12px 0 0);
+                        font-weight: 800
+                    }
+
+                    del {
+                        @include paragraph($color: $paragraph_color, )
+                    }
+                }
+
+                .cart_box {
+                    padding-top: 30px;
+
+                    button {
+                        @include btn($color: $white_color, $bg_color: $primary_color, $padding: 6px 25px, );
+                        border-radius: 10px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color;
+                        }
+                    }
+
+                    a {
+                        @include icon($border_color: $primary_color, $color: $primary_color, $margin: 0 5px);
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: $white_color;
+                            background-color: $item_bg_color;
+                            border-color: transparent;
+                        }
+                    }
+                }
+
+                .badge {
+                    @include paragraph($color: $white_color, $padding: 6px 25px, $f_size: 20px);
+                    background-color: $primary_color;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(-50%);
+                    z-index: 7;
+                }
+            }
+
+            &:hover {
+                .img_box {
+                    img {
+                        transform: scale(1.2)
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Menu Section Here =====--*/
+
+
+
+/*--===== Start Team Section Here =====--*/
+#team_section {
+    padding: 100px 0;
+    background-color: rgba($black_color, 0.1);
+
+    .section_box {
+        .team_top_part {
+            margin-bottom: 50px;
+
+            .heading_box {
+                h3 {
+                    @include heading_3;
+                }
+
+                h2 {
+                    @include heading_2($color: $item_bg_color, )
+                }
+            }
+
+            .arrow_box {
+                .team_arrow {
+                    position: relative;
+
+                    .arrow {
+                        @include flex_center;
+                        @include after_before($width: 40px, $height: 40px, $right: 15px, $bottom: 0px, $bg_color: $primary_color, $border_radius: 50%, $z_index: 6);
+                        color: $white_color;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color;
+                        }
+                    }
+
+                    .arrow_right {
+                        transform: rotate(180deg)
+                    }
+
+                    .arrow_left {
+                        right: 70px
+                    }
+                }
+            }
+        }
+
+        .team_box {
+            .team_item {
+                text-align: center;
+                padding: 30px;
+                margin: 12px 12px;
+                border-radius: 10px;
+                box-shadow: 0 0 2px rgba($black_color, 0.1);
+                background-color: $white_color;
+                position: relative;
+                overflow: hidden;
+
+                &::after {
+                    @include after_before($content: "", $height: 30%, $bg_color: $primary_color, $top: 0, $left: 0, $right: 0, $z_index: 2);
+                    clip-path: polygon(0 0, 100% 0%, 100% 25%, 50% 100%, 0 25%);
+                }
+
+                .img_box {
+                    position: relative;
+                    z-index: 3;
+
+                    img {
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        outline: 6px solid $white_color;
+                        border: 8px solid $primary_color;
+                        margin: auto
+                    }
+                }
+
+                .info_box {
+                    padding-top: 30px;
+
+                    a {
+                        h6 {
+                            @include heading_6($color: $item_bg_color, );
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+
+                    p {
+                        @include paragraph($padding: 5px 0 27px);
+                        font-weight: 600;
+                    }
+
+                    .social_icon {
+                        li {
+                            margin: 0 5px;
+
+                            a {
+                                @include icon($color: $primary_color, $bg_color: rgba($primary_color, 0.1), $border_radius: 50%);
+                                transition: 0.4s;
+
+                                &:hover {
+                                    background-color: $primary_color;
+                                    color: $white_color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Team Section Here =====--*/
+
+/*--===== Start addOffer Section Here =====--*/
+#addOffer {
+    padding: 100px 0;
+
+    .section_box {
+        .addOffer_item {
+            padding: 40px;
+            border-radius: 20px;
+
+            h5 {
+                @include heading_5($color: $primary_color, $padding: 0 0 10px);
+            }
+
+            h2 {
+                @include heading_2
+            }
+
+            p {
+                @include paragraph($padding: 16px 0);
+            }
+
+            a {
+                @include btn($padding: 10px 0px, $color: $item_bg_color );
+                display: inline-flex;
+                font-weight: 800;
+                transition: 0.4s;
+
+                i {
+                    @include icon($color: $item_bg_color);
+                    font-weight: 800;
+                    transform: rotate(180deg);
+                    transition: 0.4s;
+                }
+
+                &:hover {
+                    color: $primary_color;
+
+                    i {
+                        color: $primary_color
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--===== End addOffer Section Here =====--*/
+
+
+
+/*--===== Start Playstore Section Here =====--*/
+#playstore_section {
+    .section_box {
+        align-items: stretch;
+
+        .playstore_link {
+            @include flex_center;
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+
+            h6 {
+                @include heading_5($color: $primary_color)
+            }
+
+            h2 {
+                @include heading_2($color: $white_color, $padding: 0 0 24px, )
+            }
+
+            button {
+                @include btn($bg_color: $primary_color, $color: $white_color, $margin: 0 6px, );
+                transition: 0.4s;
+
+
+                i {
+                    @include icon($color: $white_color, $f_size: 30px, $width: 24px, $height: 24px, )
+                }
+
+                .normal {
+                    @include paragraph($color: $white_color, )
+                }
+
+                .bold {
+                    @include paragraph($f_size: 20px, $color: $white_color, );
+                    font-weight: 800;
+                }
+
+                &:hover {
+                    background-color: $red_color;
+                }
+            }
+
+            &::after {
+                @include after_before($content: '', $inset: 0, $bg_color: rgba($item_bg_color, 0.9), $z_index: -1)
+            }
+
+        }
+
+        .playstore_sliding {
+            .sliding_item {
+                padding: 0 10px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/*--===== End Playstore Section Here =====--*/
+
+/*--===== Start Testimonial Section Here =====--*/
+#testimonail_section {
+    padding: 100px 0;
+    background-color: rgba($black_color, 0.1);
+
+    .section_box {
+        .testimonail_top_part {
+
+            .heading_box {
+                h3 {
+                    @include heading_3;
+                }
+
+                h2 {
+                    @include heading_2($color: $item_bg_color, )
+                }
+            }
+
+            .arrow_box {
+                .testimonial_arrow {
+                    position: relative;
+
+                    .arrow {
+                        @include flex_center;
+                        @include after_before($width: 40px, $height: 40px, $right: 15px, $bottom: 0px, $bg_color: $primary_color, $border_radius: 50%, $z_index: 6);
+                        color: $white_color;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color;
+                        }
+                    }
+
+                    .arrow_right {
+                        transform: rotate(180deg)
+                    }
+
+                    .arrow_left {
+                        right: 70px
+                    }
+                }
+            }
+        }
+
+        .testimonial_box {
+            .testimonial_item {
+
+                margin: 100px 0 0;
+                text-align: center;
+                z-index: 1;
+                position: relative;
+
+                .testimonial_info {
+                    padding: 120px 30px 40px;
+                    background-color: $item_bg_color;
+                    border-radius: 20px;
+                    transform: scale(0.93);
+
+                    h5 {
+                        @include heading_5($color: $white_color, $f_size: 24px, )
+                    }
+
+                    p.sub_title {
+                        @include paragraph($color: $white_color, $padding: 5px 0);
+                        font-weight: 600;
+                    }
+
+                    p {
+                        @include paragraph($color: $white_color, $padding: 16px 0 10px)
+                    }
+
+                    p.star_icon {
+                        i {
+                            @include icon($color: $primary_color, $width: 24px, $height: 24px, $f_size: 20px, )
+                        }
+                    }
+
+                    img {
+                        width: 160px;
+                        height: 160px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border: 5px solid $white_color;
+                        margin: auto;
+
+                    }
+                }
+
+                &::after {
+                    @include after_before($content: '', $top: 0, $left: 0, $bg_color: $primary_color, $z_index: -1, $width: 50%, );
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+
+/*--===== End Testimonial Section Here =====--*/
+
+
+
+/*--===== Start Counter Section Here =====--*/
+#counter_section {
+    @include bg_image;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_before($content: '', $inset: 0, $bg_color: rgba($item_bg_color, 0.8, ), $z_index: -1, );
+    }
+
+    .counter_item {
+        text-align: center;
+
+        .counter_box {
+            @include flex_center;
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: rgba($item_bg_color, 0.6, );
+
+            h2 {
+                @include heading_2($color: $white_color, )
+            }
+
+            img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 5;
+                animation: counter_round 15s linear infinite;
+                border-radius: 50%;
+            }
+
+            @keyframes counter_round {
+                0% {
+                    transform: rotate(0deg)
+                }
+
+                100% {
+                    transform: rotate(360deg)
+                }
+            }
+
+            i {
+                @include icon($color: $white_color, $f_size: 30px, $bg_color: $primary_color, $border_radius: 50%, $width: 50px, $height: 50px, );
+                position: absolute;
+                left: 50%;
+                bottom: 0%;
+                transform: translate(-50%, 20%);
+                z-index: 6;
+            }
+
+
+
+        }
+
+
+        p {
+            @include paragraph($f_size: 18px, $color: $white_color, $margin: 40px 0 0);
+            font-weight: 800;
+        }
+
+    }
+}
+
+/*--===== End Counter Section Here =====--*/
+
+
+
+/*--===== Start News Section Here =====--*/
+#news_section {
+    margin: 100px 0;
+
+    .section_box {
+        .news_top_part {
+            margin-bottom: 50px;
+
+            .heading_box {
+                h3 {
+                    @include heading_3($padding: 0 0 5px, );
+                }
+
+                h2 {
+                    @include heading_2($color: $item_bg_color, )
+                }
+            }
+
+            .arrow_box {
+                .news_arrow {
+                    position: relative;
+
+                    .arrow {
+                        @include flex_center;
+                        @include after_before($width: 40px, $height: 40px, $right: 15px, $bottom: 0px, $bg_color: $primary_color, $border_radius: 50%, $z_index: 6);
+                        color: $white_color;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: $item_bg_color;
+                        }
+                    }
+
+                    .arrow_right {
+                        transform: rotate(180deg)
+                    }
+
+                    .arrow_left {
+                        right: 70px
+                    }
+                }
+            }
+
+        }
+
+        .news_box {
+            .news_item {
+                text-align: center;
+                padding: 15px;
+                margin: 12px 12px;
+                box-shadow: 0 0 4px rgba($black_color, 0.2);
+                background-color: $white_color;
+
+                .img_box {
+                    overflow: hidden;
+                    border-radius: 20px;
+
+                    img {
+
+                        width: 100%;
+                        transition: 0.4s;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: scale(1.1)
+                        }
+                    }
+                }
+
+                .info_box {
+                    padding: 40px 20px 0;
+                    text-align: left;
+                    position: relative;
+
+                    .badge {
+                        @include flex_center;
+                        padding: 10px 30px;
+                        background-color: $primary_color;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: translateY(-50%);
+
+                        p {
+                            @include paragraph($padding: 0, $color: $white_color, $f_size: 18px);
+                            font-weight: 800;
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: $item_bg_color;
+                            }
+                        }
+                    }
+
+                    .client_box {
+                        margin-bottom: 16px;
+
+                        .client_img {
+                            img {
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .client_info {
+                            padding-left: 20px;
+
+                            .name {
+                                @include paragraph($padding: 0, $color: $item_bg_color, );
+                                font-weight: 800;
+                            }
+
+                            .date {
+                                @include paragraph($padding: 0, $color: $primary_color, )
+                            }
+                        }
+                    }
+
+                    a {
+                        h6 {
+                            @include heading_6($color: $item_bg_color, );
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+
+                    p {
+                        @include paragraph($padding: 16px 0);
+                        font-weight: 600;
+                    }
+
+                    .button_box {
+                        border-top: 1px solid $primary_color;
+                        padding: 15px 0;
+
+                        a {
+                            @include btn($color: $item_bg_color, $padding: 0, );
+                            transition: 0.4s;
+
+                            i {
+                                @include icon($color: $item_bg_color, $f_size: 20px, $width: 24px, );
+                                transform: rotate(180deg);
+                                transition: 0.4s;
+                            }
+
+                            &:hover {
+                                color: $primary_color;
+
+                                i {
+                                    color: $primary_color;
+                                }
+
+                            }
+                        }
+
+                        p {
+                            @include paragraph($color: $primary_color, $padding: 0);
+                            @include flex_center;
+
+                            i {
+                                @include icon($f_size: 20px, $width: 24px)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*--===== End News Section Here =====--*/
+
+
+/*--===== Start Footer Section Here =====--*/
+#footer {
+    @include bg_image;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_before($content: "", $bg_color: rgba($item_bg_color, 0.9), $inset: 0, $z_index: -1, )
+    }
+
+    .section_box {
+        padding: 100px 0;
+
+        .widget {
+            h4 {
+                @include heading_4($color: $white_color, $margin: 0 0 30px, $padding: 0 0 5px);
+                border-bottom: 1px solid $primary_color;
+                display: inline-flex;
+            }
+
+            .widget_1 {
+                img {
+                    width: 150px;
+                    height: 80px;
+                }
+
+                P {
+                    @include paragraph($color: $white_color, $padding: 20px 0 30px, )
+                }
+
+                .social_icon {
+                    li {
+                        margin: 0 5px;
+
+                        a {
+                            @include icon($color: $white_color, $bg_color: $primary_color, $border_radius: 50%, $f_size: 20px, )
+                        }
+                    }
+                }
+            }
+
+            .widget_2,
+            .widget_3 {
+                .widget_list {
+                    li {
+                        margin: 10px 0;
+
+                        a {
+                            padding-left: 15px;
+                            @include paragraph($color: $white_color, );
+                            font-weight: 600;
+                            position: relative;
+                            transition: 0.4s;
+
+                            &::after {
+                                @include after_before($content: "", $width: 5px, $height: 5px, $bg_color: $primary_color, $left: 0, $top: 50%, );
+                                transform: translateY(-50%)
+                            }
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .widget_4 {
+                .widget_list {
+                    li {
+                        padding: 20px 0;
+                        border-bottom: 1px solid $primary_color;
+
+                        a {
+                            @include paragraph($color: $white_color, );
+
+                            i {
+                                @include icon($width: 16px, $f_size: 20px, );
+                                margin-right: 15px;
+                            }
+                        }
+
+
+                    }
+
+                    li:first-child {
+                        padding-top: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    #bottombar {
+        background-color: $primary_color;
+
+        .container {
+            @include flex_center;
+
+            p {
+                @include paragraph($f_size: 18px, $color: $white_color, $padding: 20px 0)
+            }
+        }
+    }
+}
+
+/*--===== End Footer Section Here =====--*/

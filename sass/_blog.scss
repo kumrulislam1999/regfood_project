@@ -1,0 +1,17 @@
+#blog_news_section {
+    @extend #news_section;
+
+    .section_box {
+        .news_box {
+            .news_item {
+                margin: 12px 0;
+                padding: 5px;
+            }
+        }
+
+        .pagination_box {
+            margin-top: 30px;
+            @include pagination;
+        }
+    }
+}
