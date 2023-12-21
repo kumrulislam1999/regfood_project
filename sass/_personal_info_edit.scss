@@ -1,0 +1,53 @@
+#dashboard_personal_info_edit {
+    margin: 100px 0;
+
+    .section_box {
+        background-color: $bg_color;
+        box-shadow: 0 0 6px rgba($primary_color, 0.4);
+
+        .dashboard_box {
+            @include dashboard_nav;
+        }
+
+        .dashboard_info {
+            @include dashboard_info_heading;
+
+            .edit_info_box {
+
+                .edit_box {
+                    background-color: $white_color;
+
+                    .form_box {
+                        padding: 20px;
+
+                        .input_box {
+                            margin: 12px 0;
+
+                            label {
+                                display: block;
+                                width: 100%;
+                                @include paragraph($f_size: 18px, $color: $item_bg_color);
+                                margin-bottom: 8px;
+                            }
+
+                            input,
+                            textarea,
+                            select {
+                                display: block;
+                                width: 100%;
+                                padding: 12px 20px;
+                                box-shadow: 0 0 8px rgba($black_color, 0.2)
+                            }
+                        }
+
+                        .button_box {
+                            margin-top: 20px;
+                            @include hover_btn;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,88 @@
+#order_section {
+    @extend #dashboard_personal_info_edit;
+    margin: 100px 0;
+
+
+    .section_box {
+
+        .dashboard_info {
+            padding: 15px 0;
+            @include dashboard_info_heading;
+
+            .order_box {
+                background-color: $white_color;
+
+                .table_box {
+                    text-align: center;
+                    max-width: 100%;
+                    ;
+
+                    .heading {
+                        background-color: $primary_color;
+                        color: $white_color;
+
+                    }
+
+                    .heading,
+                    .details {
+                        border-bottom: 1px solid rgba($paragraph_color, 0.2);
+
+                        td,
+                        th {
+                            padding: 10px 0;
+                        }
+
+                        p {
+                            @include paragraph($l_height: 20px);
+
+                        }
+
+                        h6 {
+                            @include heading_6;
+                            font-weight: 500;
+                        }
+
+                        a {
+                            @include btn($bg_color: $primary_color, $color: $white_color, $padding: 5px 20px, $border_radius: 30px, $l_height: 25px);
+                            display: inline-block;
+                            transition: 0.4s;
+                            font-weight: 400;
+                            border: 1px solid transparent;
+
+
+                            &:hover {
+                                background-color: $white_color;
+                                color: $primary_color;
+                                border-color: $primary_color;
+                            }
+                        }
+
+                        span {
+                            @include btn($bg_color: $primary_color, $color: $white_color, $border_radius: 20px, $l_height: 25px);
+                            width: 130px;
+                            padding: 5px 0;
+                            text-align: center;
+                            font-weight: 400;
+                            margin: auto;
+                        }
+
+                        .complete_box {
+                            color: $complate_color;
+                            background-color: rgba($complate_color, 0.2)
+                        }
+
+                        .active_box {
+                            color: $primary_color;
+                            background-color: rgba($active_bg_color, 0.1)
+                        }
+
+                        .cancel_box {
+                            color: $cancel_color;
+                            background-color: rgba($cancel_color, 0.2)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -171,7 +171,7 @@
         .personal_img_box {
             width: 100%;
             text-align: center;
-            padding: 35px;
+            padding: 50px 35px;
             margin: auto;
 
             .img_box {
@@ -246,6 +246,25 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+@mixin dashboard_info_heading {
+    .heading_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0;
+
+        h4 {
+            @include heading_4($color: $item_bg_color, );
+            font-weight: 600;
+        }
+
+        a {
+            @include btn($bg_color: $primary_color, $color: $white_color, $border_radius: 30px, )
         }
     }
 }

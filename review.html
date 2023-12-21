@@ -77,6 +77,7 @@
     </section>
     <!--===== End TopBar Section Here =====-->
 
+
     <!--===== Start Header Section Here =====-->
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -86,7 +87,7 @@
                 <a href="#primary_nav" class="navbar-toggler" data-bs-toggle="toggle"></a>
                 <div class="navbar-collapse collapse" id="primary_nav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a href="./index.html" class="">Home <span class="line"></span></a>
+                        <li class="nav-item"><a href="./index.html" class="active">Home <span class="line"></span></a>
                         </li>
                         <li class="nav-item"><a href="./about.html" class="">About <span class="line"></span></a></li>
                         <li class="nav-item"><a href="./menu.html" class="">Menu<span class="line"></span></a></li>
@@ -112,8 +113,7 @@
                         </li>
                         <li class="nav-item"><a href="./blog.html" class="">Blogs <span class="line"></span></a>
                         </li>
-                        <li class="nav-item"><a href="./contact.html" class="active">Contact <span
-                                    class="line"></span></a></li>
+                        <li class="nav-item"><a href="./contact.html">Contact <span class="line"></span></a></li>
                     </ul>
                     <ul class="right_icon_menu d-flex align-items-center ms-auto">
                         <li><a href="#"><i class='bx bx-shopping-bag'></i> <span class="notification">9</span></a></li>
@@ -132,10 +132,10 @@
             <div class="row align-items-center justify-content-center h-100">
                 <div class="col-lg-6">
                     <div class="page_bannar_info">
-                        <h2>Contact With Us</h2>
+                        <h2>User Dashboard</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+                            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
                         </ul>
                     </div>
                 </div>
@@ -145,109 +145,152 @@
     <!--===== End Page Bannar Section Here =====-->
 
 
-
-
-
-
-
     <!--===== Start Main Section Here =====-->
     <main>
 
-        <!--===== Start Contact Section Here =====-->
-        <section id="contact_section">
+        <!--===== Start Dashboard Section Here =====-->
+        <section id="dashboard_review_section">
             <div class="container section_box">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="contact_info">
-                            <div class="call_box contact_info_item">
-                                <h4>Call</h4>
-                                <p>+1347-430-9510</p>
-                                <p>+9658745554002</p>
-                            </div>
-                            <div class="mail_box contact_info_item">
-                                <h4>Mail</h4>
-                                <p>websolutionus1@gmail.com</p>
-                                <p>example@gmail.com</p>
-                            </div>
-                            <div class="location_box contact_info_item">
-                                <h4>Location</h4>
-                                <p>7232 Broadway Suite 308, Jackson Heights, 11372, NY, United States</p>
+                <div class="row ">
+                    <div class="col-lg-3">
+                        <div class="dashboard_box">
+                            <div class="dashboard_nav">
+                                <div class="personal_img_box">
+                                    <div class="img_box">
+                                        <img src="./assets/images/testimonial_img_3.jpg" alt="" class="img-fluid">
+                                        <button type="button"><i class='bx bxs-camera'></i></button>
+                                    </div>
+                                    <h6>Hasib Ahmed</h6>
+                                </div>
+                                <div class="nav_box">
+                                    <ul class="nav_list">
+                                        <li><a href="./personal_info.html"><i class='bx bxs-user'></i> <span> Personal
+                                                    Info</span></a></li>
+                                        <li><a href="./address.html"><i class='bx bxs-user'></i> <span>
+                                                    Address</span></a></li>
+                                        <li><a href="./order.html"><i class='bx bxs-shopping-bags'></i> <span>
+                                                    Order</span></a>
+                                        </li>
+                                        <li><a href="./wishlist.html"><i class='bx bx-heart'></i> <span>
+                                                    Whislist</span></a></li>
+                                        <li><a href="./review.html"><i class='bx bxs-star'></i> <span> Review</span></a>
+                                        </li>
+                                        <li><a href="./change_password.html"><i class='bx bx-key'></i> <span> Change
+                                                    Password</span></a></li>
+                                        <li><a href="#"><i class='bx bx-log-out'></i> <span class="bottom_border"> Log
+                                                    Out</span></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="contact_form">
-                            <form action="#">
-                                <div class="form_box">
-                                    <div class="row align-items-center justify-content-between">
-                                        <div class="col-lg-12">
-                                            <div class="input_box">
-                                                <div class="icon_box"><label for="name"><i
-                                                            class='bx bxs-user'></i></label>
-                                                </div><input type="text" placeholder="Name" id="name">
-                                            </div>
+                    <div class="col-lg-9">
+                        <div class="dashboard_info">
+                            <div class="heading_box">
+                                <h4>Review</h4>
+                            </div>
+                            <div class="review_info_box">
+
+                                <div class="review_box">
+                                    <div class="review_item">
+                                        <div class="img_box">
+                                            <img src="./assets/images/menu2_img_1.jpg" alt="" class="img-fluid">
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="input_box">
-                                                <div class="icon_box"><label for="email"><i
-                                                            class='bx bxs-envelope'></i></label></div><input
-                                                    type="email" placeholder="Email" id="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="input_box">
-                                                <div class="icon_box"><label for="phone"><i
-                                                            class='bx bx-phone-call'></i></label>
-                                                </div><input type="number" placeholder="Phone" id="phone">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="input_box">
-                                                <div class="icon_box">
-                                                    <label for="subject"><i class='bx bxs-book'></i></label>
-                                                </div> <input type="text" placeholder="Subject" id="subject">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="input_box">
-                                                <div class="icon_box">
-                                                    <label for="message"><i class='bx bxs-edit-alt'></i></label>
-                                                </div>
-                                                <textarea name="" id="message" cols="10" rows="3"
-                                                    placeholder="Message"></textarea>
-                                            </div>
+                                        <div class="info_box">
+                                            <a href="#">
+                                                <h6>Mamun Ahmed Shuvo</h6>
+                                            </a>
+                                            <p class="date">29 Oct 2022</p>
+                                            <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                                                    class='bx bxs-star'></i><i class='bx bxs-star-half'></i><i
+                                                    class='bx bx-star'></i><span>(120)</span></p>
+                                            <p>Sure there isn't anything embarrassing hiidden in the middles of
+                                                text. All erators on the Internet tend to repeat
+                                                predefined chunks</p>
+                                            <button type="button" class="active_btn">Active</button>
                                         </div>
                                     </div>
-                                    <div class="button_box">
-                                        <button type="button">
-                                            <span>Search</span>
-                                            <span class="span_hover"><i class='bx bxs-chevrons-right'></i> Search</span>
-                                        </button>
+                                    <div class="review_item">
+                                        <div class="img_box">
+                                            <img src="./assets/images/menu2_img_2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="info_box">
+                                            <a href="#">
+                                                <h6>Asaduzzaman Khan</h6>
+                                            </a>
+                                            <p class="date">29 Oct 2022</p>
+                                            <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                                                    class='bx bxs-star'></i><i class='bx bxs-star-half'></i><i
+                                                    class='bx bx-star'></i><span>(120)</span></p>
+                                            <p>Sure there isn't anything embarrassing hiidden in the middles of
+                                                text. All erators on the Internet tend to repeat
+                                                predefined chunks</p>
+                                            <button type="button" class="inactive_btn">Inactive</button>
+                                        </div>
+                                    </div>
+                                    <div class="review_item">
+                                        <div class="img_box">
+                                            <img src="./assets/images/menu2_img_3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="info_box">
+                                            <a href="#">
+                                                <h6>Ariful Islam Rupom</h6>
+                                            </a>
+                                            <p class="date">29 Oct 2022</p>
+                                            <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                                                    class='bx bxs-star'></i><i class='bx bxs-star-half'></i><i
+                                                    class='bx bx-star'></i><span>(120)</span></p>
+                                            <p>Sure there isn't anything embarrassing hiidden in the middles of
+                                                text. All erators on the Internet tend to repeat
+                                                predefined chunks</p>
+                                            <button type="button" class="active_btn">Active</button>
+                                        </div>
+                                    </div>
+                                    <div class="review_item">
+                                        <div class="img_box">
+                                            <img src="./assets/images/menu2_img_1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="info_box">
+                                            <a href="#">
+                                                <h6>Ali Ahmed Jakir</h6>
+                                            </a>
+                                            <p class="date">29 Oct 2022</p>
+                                            <p class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                                                    class='bx bxs-star'></i><i class='bx bxs-star-half'></i><i
+                                                    class='bx bx-star'></i><span>(120)</span></p>
+                                            <p>Sure there isn't anything embarrassing hiidden in the middles of
+                                                text. All erators on the Internet tend to repeat
+                                                predefined chunks</p>
+                                            <button type="button" class="inactive_btn">Inactive</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="pagination_box">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <i class='bx bx-arrow-back arrow left_arrow'></i>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link active" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <i class='bx bx-arrow-back arrow right_arrow'></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
-        <!--===== End Contact Section Here =====-->
-
-
-
-        <section id="contact_map_section">
-            <div class="container section_box">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29199.78758207035!2d90.43684581929195!3d23.819543211524437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c62fce7d991f%3A0xacfaf1ac8e944c05!2sBasundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1667021568123!5m2!1sen!2sbd"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-
+        <!--===== End Dashboard Section Here =====-->
 
     </main>
     <!--===== End Main Section Here =====-->
-
 
 
     <!--===== Start Footer Section Here =====-->
@@ -327,6 +370,9 @@
         </div>
     </footer>
     <!--===== End Footer Section Here =====-->
+
+
+
 
 
 

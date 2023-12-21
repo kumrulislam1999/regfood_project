@@ -1,4 +1,4 @@
-#dashboard {
+#dashboard_personal_info {
     margin: 100px 0;
 
     .section_box {
@@ -10,25 +10,12 @@
         }
 
         .dashboard_info {
+            @include dashboard_info_heading;
 
             .personal_info_box {
-                .heading_box {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 25px 0;
-
-                    h3 {
-                        @include heading_3($color: $item_bg_color, )
-                    }
-
-                    button {
-                        @include btn($bg_color: $primary_color, $color: $white_color, $border_radius: 30px, )
-                    }
-                }
+                background-color: $white_color;
 
                 .info_box {
-                    background-color: $white_color;
 
                     .info_item {
                         box-shadow: 0 0 3px rgba($black_color, 0.2);

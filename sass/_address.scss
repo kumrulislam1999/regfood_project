@@ -1,0 +1,67 @@
+#address_section {
+    margin: 100px 0;
+
+    .section_box {
+        background-color: $bg_color;
+        box-shadow: 0 0 10px rgba($primary_color, 0.4);
+
+        .dashboard_box {
+            @include dashboard_nav;
+        }
+
+        .dashboard_info {
+            @include dashboard_info_heading;
+
+            .address_box {
+                .address_item {
+                    margin: 12px 0;
+                    padding: 15px;
+                    background-color: $white_color;
+
+                    .name_box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 0;
+                        border-bottom: 1px solid $primary_color;
+
+                        .name_part {
+                            label {
+                                @include paragraph($color: $primary_color, );
+
+                                i {
+                                    margin-right: 5px;
+                                    @include icon($color: $primary_color, $width: 16px, )
+                                }
+                            }
+
+                            input {
+                                accent-color: $primary_color;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        .delete_box {
+                            i {
+                                @include icon($color: $primary_color, $border_radius: 50%, $border_color: $primary_color, $width: 24px, $height: 24px, $f_size: 14px);
+                                transition: 0.4s;
+
+                                &:hover {
+                                    background-color: $primary_color;
+                                    color: $white_color;
+                                    border-color: $white_color;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        @include paragraph($padding: 20px 0, )
+                    }
+                }
+            }
+
+        }
+
+    }
+}

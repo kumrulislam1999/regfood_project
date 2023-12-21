@@ -1,0 +1,51 @@
+#addnew_address_section {
+    @extend #dashboard_personal_info_edit;
+    margin: 100px 0;
+
+    .section_box {
+        .dashboard_info {
+            .edit_info_box {
+                .edit_box {
+                    .form_box {
+                        .input_radio {
+                            margin: 12px 0;
+                            display: flex;
+                            align-items: center;
+
+                            .radio_box {
+                                @include flex_center;
+                                @include paragraph($l_height: 20px);
+                                border-radius: 30px;
+                                background-color: $section_bg_color;
+                                padding: 10px 20px;
+                                margin-right: 20px;
+
+
+                                input {
+                                    margin-right: 5px;
+                                }
+
+                            }
+                        }
+
+                        .submit_reset {
+                            display: flex;
+                            align-items: center;
+
+                            button {
+                                @include btn($padding: 10px 30px, $bg_color: $primary_color, $margin: 12px 20px 12px 0, $border_radius: 30px, $color: $white_color, $l_height: 20px);
+                                transition: 0.4s;
+
+                                &:hover {
+                                    background-color: $item_bg_color
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

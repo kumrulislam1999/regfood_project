@@ -169,14 +169,7 @@ $(function () {
 
 
     /*--===== Start Dashboard Section Here =====--*/
-    $(".edit_btn").on("click", function () {
-        $('.personal_info_box').addClass("hide")
-        $('.edit_info_box').addClass('show')
-    })
-    $(".cancel_btn").on("click", function () {
-        $('.edit_info_box').removeClass('show')
-        $('.personal_info_box').removeClass("hide")
-    })
+
     /*--===== End Dashboard Section Here =====--*/
 
 })

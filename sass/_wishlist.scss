@@ -1,0 +1,43 @@
+    /*--===== Start Dashboard Wishlist Section Here =====--*/
+    #wishlist_section {
+        @extend #dashboard_personal_info_edit;
+        @extend #menu_menu_section;
+
+        .section_box {
+            .dashboard_info {
+                padding: 15px 0;
+                @include dashboard_info_heading;
+
+                .wishlist_info_box {
+                    padding: 15px;
+                    background-color: $white_color;
+
+                    .menu_item {
+                        padding: 0px !important;
+
+                        .info_box {
+                            padding: 30px 5px 10px;
+
+                            .cart_box {
+
+
+                                button {
+                                    padding: 6px 20px;
+
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    .pagination_box {
+                        margin: 20px 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /*--===== End Dashboard Wishlist Section Here =====--*/
